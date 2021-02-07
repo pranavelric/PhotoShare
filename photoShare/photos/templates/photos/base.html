@@ -45,17 +45,23 @@
 
 
 
+
+
   <div id="sideNav" class="sideNav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    <a href="/">Home</a>
-    <a href="/add">Add</a>
 
     <div class="side_dropdown">
       <span id="dd">Categories</span>
       <div class="side_dropdown_content">
         <a href="/">All</a>
 
+        {% for category in categories %}
+
+        <a href="/?category={{category.name}}">{{category.name}}</a>
+
+
+        {% endfor %}
 
 
       </div>
@@ -73,7 +79,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <!-- <span class="nav-item" style="font-size:30px;cursor:pointer;color: #fff;" onclick="openNav()">&#9776;
-          open</span> -->
+            open</span> -->
 
         <span class="navbar-brand" id="toggle_btn" onclick=" openNav()">&#9776</span>
 
@@ -99,12 +105,10 @@
                 Categories
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Nature</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Nature</a></li>
-
+                <li><a class="dropdown-item" href="/">All</a></li>
+                {% for category in categories %}
+                <li><a class="dropdown-item" href="/?category={{category.name}}">{{category.name}}</a></li>
+                {% endfor %}
               </ul>
             </li>
 

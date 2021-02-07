@@ -2,5 +2,46 @@
 
 
 {% block title %}Add{% endblock title %}
-<!-- {% block body %}
-{% endblock body %} -->
+{% block body %}
+
+<div class="add_main ">
+    <div class="container">
+        <form method="POST" action="" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Image</label>
+                <input required class="form-control" name="image" type="file" id="formFile">
+            </div>
+
+
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" name="cat" id="category">
+                <option value="none">Select a category</option>
+                {% for category in categories %}
+
+                <option value="{{category.name}}">{{category.name}}</option>
+                {% endfor %}
+            </select>
+
+            <div class="input-group mb-3 my-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Create new category</span>
+                <input type="text" class="form-control" name="new_cat" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+
+
+            <div class="input-group my-3">
+                <span class="input-group-text">Description</span>
+                <textarea required class="form-control" name="desc" aria-label="With textarea"></textarea>
+            </div>
+
+
+            <button type="submit" class=" my-3 btn btn-dark">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

@@ -8,28 +8,24 @@
 
 <div class="center_main_photos">
 
-    <div class="container-fluid">
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c2572243e8286.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img id="photo_view" src="{{photo.image.url}}" class="d-block w-100" alt="...">
             </div>
+
         </div>
-
-
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dignissimos sit expedita ullam autem,
-            provident dolore corporis itaque incidunt dolor quae quod ut aperiam harum quam earum odio deleniti
-            voluptatum?
-
-        </p>
-
     </div>
+
+
+
+    <p id="desc">
+        {{photo.desc}}
+
+    </p>
+
+
 
 
 
