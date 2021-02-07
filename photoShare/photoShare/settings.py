@@ -25,7 +25,7 @@ SECRET_KEY = '&q2!jp@&6sc!4*9co3rp1acnrc7gkj9pxugw6e4&032=!wzyc_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["pranavelric.pythonanywhere.com"]
 
 
 # Application definition
