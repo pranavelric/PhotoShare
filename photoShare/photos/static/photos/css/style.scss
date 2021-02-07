@@ -1,0 +1,93 @@
+@import "_gallery";
+@import "_photos";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+.sideNav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #212529;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+}
+
+.sideNav a{
+ 
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sideNav a:hover{
+    color: #f1f1f1;
+}
+.sideNav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+#main{
+
+    transition: margin-left .5s;
+    margin: 0;
+    padding: 0;
+}
+#toggle_btn{
+
+cursor:pointer; 
+transition: 11.3s;
+
+}
+
+
+.side_dropdown{
+    padding: 8px 8px 8px 32px;
+    color: #818181;
+position: relative;
+display: inline-block;
+}
+.side_dropdown_content{
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width:10rem;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 10px;
+  border-radius: 0.4rem;
+  z-index: 1;
+& a:hover{
+    color: black;
+}
+
+}
+
+.side_dropdown:hover .side_dropdown_content {
+    display: block;
+  }
+
+
+@media screen and (max-height:450px){
+    .sideNav{padding-top: 1rem;}
+    .sideNav a{font-size: 1.5rempx;}
+}
+
